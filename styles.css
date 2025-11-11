@@ -7,14 +7,31 @@ body {
 }
 
 header {
-    position: sticky;
-    top: 0;
     background: #222;
     color: #fff;
     padding: 2rem;
     text-align: center;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
+
+.main-nav {
+    margin-top: 1rem;
+}
+
+    .main-nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+        .main-nav a:hover {
+            color: #ffcc00; /* highlight color on hover */
+        }
+
 
 
 section {
@@ -24,22 +41,34 @@ section {
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    width: 100%;
+    margin: auto;
 }
 
 .artwork {
+    width: 300px;
+    margin-bottom: 1.5rem;
     background: #fff;
-    width: 700px;
-    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
     .artwork img {
-        max-width: 100%;
+        width: 100%;
+        height: auto;
+        display: block;
         border-radius: 4px;
     }
+
+
+
+@media (max-width: 768px) {
+    .gallery-3, .gallery-2 {
+        column-count: 1;
+    }
+}
+
+
 
 footer {
     text-align: center;
