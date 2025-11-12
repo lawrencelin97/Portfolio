@@ -27,6 +27,17 @@ header {
     z-index: 1000;
 }
 
+iframe {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    iframe {
+        width: 90% !important;
+    }
+}
+
+
 .main-nav {
     margin-top: 1rem;
 }
@@ -59,24 +70,6 @@ section {
     flex-wrap: wrap; /* allows wrapping on smaller screens */
     margin: 0.5rem 0;
 }
-
-
-
-
-@media (max-width: 768px) {
-    .artwork {
-        width: 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .artwork {
-        width: 100%;
-    }
-}
-
-
-
 
 footer {
     text-align: center;
