@@ -40,17 +40,40 @@ section {
     margin: auto;
 }
 
+.gallery-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem;
+    white-space: nowrap;
+}
+
+.row {
+    display: flex;
+    gap: 1rem;
+}
+
+    .row img {
+        height: 200px; /* or vary per row */
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+
 .gallery {
-    width: 100%;
-    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
 }
 
 .artwork {
-    width: 300px;
-    margin-bottom: 1.5rem;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transition: all 0.3s ease;
 }
 
     .artwork img {
@@ -61,12 +84,18 @@ section {
     }
 
 
-
 @media (max-width: 768px) {
-    .gallery-3, .gallery-2 {
-        column-count: 1;
+    .artwork {
+        width: 45%;
     }
 }
+
+@media (max-width: 480px) {
+    .artwork {
+        width: 100%;
+    }
+}
+
 
 
 

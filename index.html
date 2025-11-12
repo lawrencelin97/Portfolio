@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lawrence's Art Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- jQuery (required) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- JustifiedGallery plugin -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 </head>
 <body>
     <header>
@@ -53,33 +57,34 @@
     </section>
     <section id="Illustrations">
         <h2>Illustrations</h2>
-        <div class="gallery" id="masonry-gallery">
-            <div class="artwork">
+        <div id="myGallery">
+
+            <a href="fullsize1.jpg">
                 <img src="artworks/illustrations/1.jpg" alt="illustration1" />
-            </div>
-            <div class="artwork">
+            </a>
+            <a href="fullsize1.jpg">
                 <img src="artworks/illustrations/2.jpg" alt="illustration2" />
-            </div>
-            <div class="artwork">
+            </a>
+            <a href="fullsize1.jpg">
                 <img src="artworks/illustrations/3.jpg" alt="illustration3" />
-            </div>
-            <div class="artwork">
+            </a>
+            <a href="fullsize1.jpg">
                 <img src="artworks/illustrations/4.jpg" alt="illustration4" />
-            </div>
-            <div class="artwork">
+            </a>
+            <a href="fullsize1.jpg">
                 <img src="artworks/illustrations/5.jpg" alt="illustration5" />
-            </div>
-            <div class="artwork">
+            </a>
+            <a href="fullsize1.jpg">
                 <img src="artworks/illustrations/6.jpg" alt="illustration6" />
-            </div>
-            <div class="artwork">
+            </a>
+            <a href="fullsize1.jpg">
                 <img src="artworks/illustrations/7.jpg" alt="illustration7" />
-            </div>
-            <div class="artwork">
+            </a>
+            <a href="fullsize1.jpg">
                 <img src="artworks/illustrations/8.jpg" alt="illustration8" />
-            </div>
+            </a>
         </div>
-    </section>
+</section>
     <section id="Studies">
         <h2>Studies</h2>
         <div class="gallery gallery-3">
@@ -183,11 +188,12 @@
 </html>
 
 <script>
-    const grid = document.querySelector('#masonry-gallery');
-    new Masonry(grid, {
-        itemSelector: '.artwork',
-        columnWidth: '.artwork',
-        gutter: 20,
-        fitWidth: true
+    $(document).ready(function () {
+        $('#myGallery').justifiedGallery({
+            rowHeight: 200,
+            margins: 10,
+            lastRow: 'nojustify',
+            captions: false
+        });
     });
 </script>
